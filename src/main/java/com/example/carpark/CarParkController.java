@@ -145,7 +145,7 @@ public class CarParkController {
                 "Etage 3",
                 "Etage 4");
 
-        anzeige.setText("Freie Parkplätze: ");
+        anzeige.setText(" Freie Parkplätze: ");
     }
 
 
