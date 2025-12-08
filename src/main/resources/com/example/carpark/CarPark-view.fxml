@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -219,10 +220,13 @@
         <ComboBox fx:id="levelSelector" onAction="#onShow" prefHeight="30.0" prefWidth="200.0" promptText="Bitte Etage wählen" BorderPane.alignment="CENTER" />
     </top>
    <bottom>
-      <Label fx:id="anzeige" prefHeight="60.0" prefWidth="600.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+      <Label fx:id="anzeige" alignment="CENTER" opacity="0.85" prefHeight="60.0" prefWidth="600.0" textAlignment="CENTER" textFill="#a13f3f" BorderPane.alignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
+         <effect>
+            <Reflection />
+         </effect>
       </Label>
    </bottom>
 </BorderPane>

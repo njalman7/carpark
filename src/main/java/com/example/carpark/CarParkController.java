@@ -139,13 +139,17 @@ public class CarParkController {
 
     @FXML
     void initialize() {
+        int allSpots = 200;
+        int freeSpots = 55; // erstmal als Platzhalter
+        double percent = 100.0 / allSpots * freeSpots;
         levelSelector.getItems().setAll("Etage 0",
-                "Etage 1",
-                "Etage 2",
-                "Etage 3",
-                "Etage 4");
+                                        "Etage 1",
+                                        "Etage 2",
+                                        "Etage 3",
+                                        "Etage 4");
 
-        anzeige.setText(" Freie Parkplätze: ");
+        anzeige.setText(" Freie Parkplätze: " + freeSpots + " von " + allSpots
+                + ".                     Auslastung: " + percent + "%");
     }
 
 
