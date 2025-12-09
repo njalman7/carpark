@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CarParkController {
+    private Map<String, Boolean> parkingStatus = new HashMap<>();
     private static final int TOTAL_SPOTS = 200;
     private int freeSpots;
     private void hideAllSpots() {
@@ -56,6 +57,56 @@ public class CarParkController {
         D8.setVisible(false);
         D9.setVisible(false);
         D10.setVisible(false);
+    }
+    private void setupParkingStatus() {
+
+        // Reihe A
+        parkingStatus.put("A1", true);
+        parkingStatus.put("A2", true);
+        parkingStatus.put("A3", false);
+        parkingStatus.put("A4", true);
+        parkingStatus.put("A5", false);
+        parkingStatus.put("A6", true);
+        parkingStatus.put("A7", true);
+        parkingStatus.put("A8", false);
+        parkingStatus.put("A9", true);
+        parkingStatus.put("A10", true);
+
+        // Reihe B
+        parkingStatus.put("B1", true);
+        parkingStatus.put("B2", false);
+        parkingStatus.put("B3", true);
+        parkingStatus.put("B4", true);
+        parkingStatus.put("B5", true);
+        parkingStatus.put("B6", false);
+        parkingStatus.put("B7", true);
+        parkingStatus.put("B8", true);
+        parkingStatus.put("B9", false);
+        parkingStatus.put("B10", true);
+
+        // Reihe C
+        parkingStatus.put("C1", true);
+        parkingStatus.put("C2", true);
+        parkingStatus.put("C3", false);
+        parkingStatus.put("C4", true);
+        parkingStatus.put("C5", true);
+        parkingStatus.put("C6", false);
+        parkingStatus.put("C7", true);
+        parkingStatus.put("C8", false);
+        parkingStatus.put("C9", true);
+        parkingStatus.put("C10", true);
+
+        // Reihe D
+        parkingStatus.put("D1", true);
+        parkingStatus.put("D2", false);
+        parkingStatus.put("D3", true);
+        parkingStatus.put("D4", true);
+        parkingStatus.put("D5", false);
+        parkingStatus.put("D6", true);
+        parkingStatus.put("D7", true);
+        parkingStatus.put("D8", false);
+        parkingStatus.put("D9", true);
+        parkingStatus.put("D10", true);
     }
 
     @FXML
@@ -189,13 +240,13 @@ public class CarParkController {
 
     @FXML
     void initialize() {
-        // Aktuelle freie Parkplätze berechnen / setzen
-        freeSpots = 55; // später z.B. aus Datenbank
+        setupParkingStatus();
+        updateFreeSpotsDisplay();
 
         double utilization = calculateUtilization();
 
         levelSelector.getItems().setAll(
-                "Alle anzeigen",
+                "Alle anzeigen  ",
                 "Etage 0",
                 "Etage 1",
                 "Etage 2",
@@ -300,5 +351,25 @@ public class CarParkController {
     private double calculateUtilization() {
         return (100.0 / TOTAL_SPOTS) * freeSpots;
 
+    }
+    private int countFreeSpots() {
+        int count = 0;
+
+        for (Boolean isFree : parkingStatus.values()) {
+            if (isFree) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+    private void updateFreeSpotsDisplay() {
+        int free = countFreeSpots();
+        double percent = (100.0 / TOTAL_SPOTS) * free;
+
+        anzeige.setText(
+                "Freie Parkplätze: " + free + " von " + TOTAL_SPOTS +
+                        " | Auslastung: " + percent + " %"
+        );
     }
 }
