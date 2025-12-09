@@ -6,7 +6,57 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CarParkController {
+    private static final int TOTAL_SPOTS = 200;
+    private int freeSpots;
+    private void hideAllSpots() {
+        A1.setVisible(false);
+        A2.setVisible(false);
+        A3.setVisible(false);
+        A4.setVisible(false);
+        A5.setVisible(false);
+        A6.setVisible(false);
+        A7.setVisible(false);
+        A8.setVisible(false);
+        A9.setVisible(false);
+        A10.setVisible(false);
+
+        B1.setVisible(false);
+        B2.setVisible(false);
+        B3.setVisible(false);
+        B4.setVisible(false);
+        B5.setVisible(false);
+        B6.setVisible(false);
+        B7.setVisible(false);
+        B8.setVisible(false);
+        B9.setVisible(false);
+        B10.setVisible(false);
+
+        C1.setVisible(false);
+        C2.setVisible(false);
+        C3.setVisible(false);
+        C4.setVisible(false);
+        C5.setVisible(false);
+        C6.setVisible(false);
+        C7.setVisible(false);
+        C8.setVisible(false);
+        C9.setVisible(false);
+        C10.setVisible(false);
+
+        D1.setVisible(false);
+        D2.setVisible(false);
+        D3.setVisible(false);
+        D4.setVisible(false);
+        D5.setVisible(false);
+        D6.setVisible(false);
+        D7.setVisible(false);
+        D8.setVisible(false);
+        D9.setVisible(false);
+        D10.setVisible(false);
+    }
 
     @FXML
     private Label A1;
@@ -139,25 +189,116 @@ public class CarParkController {
 
     @FXML
     void initialize() {
-        int allSpots = 200;
-        int freeSpots = 55; // erstmal als Platzhalter
-        double percent = 100.0 / allSpots * freeSpots;
-        levelSelector.getItems().setAll("Etage 0",
-                                        "Etage 1",
-                                        "Etage 2",
-                                        "Etage 3",
-                                        "Etage 4");
+        // Aktuelle freie Parkplätze berechnen / setzen
+        freeSpots = 55; // später z.B. aus Datenbank
 
-        anzeige.setText(" Freie Parkplätze: " + freeSpots + " von " + allSpots
-                + ".                     Auslastung: " + percent + "%");
+        double utilization = calculateUtilization();
+
+        levelSelector.getItems().setAll(
+                "Alle anzeigen",
+                "Etage 0",
+                "Etage 1",
+                "Etage 2",
+                "Etage 3"
+        );
+
+        updateAnzeige(utilization);
     }
 
 
     @FXML
     void onShow(ActionEvent event) {
+        String selected = levelSelector.getValue();
+
+        if (selected == null) return;
+
+        hideAllSpots();
+
+        switch (selected) {
+            case "Alle anzeigen":
+                showRowA();
+                showRowB();
+                showRowC();
+                showRowD();
+                break;
+            case "Etage 0":
+                showRowA();
+                break;
+            case "Etage 1":
+                showRowB();
+                break;
+            case "Etage 2":
+                showRowC();
+                break;
+            case "Etage 3":
+                showRowD();
+                break;
+        }
 
     }
 
+    private void showRowA() {
+        A1.setVisible(true);
+        A2.setVisible(true);
+        A3.setVisible(true);
+        A4.setVisible(true);
+        A5.setVisible(true);
+        A6.setVisible(true);
+        A7.setVisible(true);
+        A8.setVisible(true);
+        A9.setVisible(true);
+        A10.setVisible(true);
+    }
+
+    private void showRowB() {
+        B1.setVisible(true);
+        B2.setVisible(true);
+        B3.setVisible(true);
+        B4.setVisible(true);
+        B5.setVisible(true);
+        B6.setVisible(true);
+        B7.setVisible(true);
+        B8.setVisible(true);
+        B9.setVisible(true);
+        B10.setVisible(true);
+    }
+
+    private void showRowC() {
+        C1.setVisible(true);
+        C2.setVisible(true);
+        C3.setVisible(true);
+        C4.setVisible(true);
+        C5.setVisible(true);
+        C6.setVisible(true);
+        C7.setVisible(true);
+        C8.setVisible(true);
+        C9.setVisible(true);
+        C10.setVisible(true);
+    }
+
+    private void showRowD() {
+        D1.setVisible(true);
+        D2.setVisible(true);
+        D3.setVisible(true);
+        D4.setVisible(true);
+        D5.setVisible(true);
+        D6.setVisible(true);
+        D7.setVisible(true);
+        D8.setVisible(true);
+        D9.setVisible(true);
+        D10.setVisible(true);
+    }
 
 
+    private void updateAnzeige(double utilization) {
+        anzeige.setText(
+                " Freie Parkplätze: " + freeSpots + " von " + TOTAL_SPOTS +
+                        " | Auslastung: " + utilization + "%"
+        );
+    }
+
+    private double calculateUtilization() {
+        return (100.0 / TOTAL_SPOTS) * freeSpots;
+
+    }
 }
