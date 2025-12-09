@@ -246,7 +246,7 @@ public class CarParkController {
         double utilization = calculateUtilization();
 
         levelSelector.getItems().setAll(
-                "Alle anzeigen  ",
+                "Alle Etagen",
                 "Etage 0",
                 "Etage 1",
                 "Etage 2",
@@ -266,7 +266,7 @@ public class CarParkController {
         hideAllSpots();
 
         switch (selected) {
-            case "Alle anzeigen":
+            case "Alle Etagen":
                 showRowA();
                 showRowB();
                 showRowC();
