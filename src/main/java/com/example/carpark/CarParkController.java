@@ -2,6 +2,7 @@ package com.example.carpark;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
@@ -110,124 +111,124 @@ public class CarParkController {
     }
 
     @FXML
-    private Label A1;
+    private Button A1;
 
     @FXML
-    private Label A2;
+    private Button A2;
 
     @FXML
-    private Label A3;
+    private Button A3;
 
     @FXML
-    private Label A4;
+    private Button A4;
 
     @FXML
-    private Label A5;
+    private Button A5;
 
     @FXML
-    private Label A6;
+    private Button A6;
 
     @FXML
-    private Label A7;
+    private Button A7;
 
     @FXML
-    private Label A8;
+    private Button A8;
 
     @FXML
-    private Label A9;
+    private Button A9;
 
     @FXML
-    private Label A10;
+    private Button A10;
 
     @FXML
-    private Label B1;
+    private Button B1;
 
     @FXML
-    private Label B2;
+    private Button B2;
 
     @FXML
-    private Label B3;
+    private Button B3;
 
     @FXML
-    private Label B4;
+    private Button B4;
 
     @FXML
-    private Label B5;
+    private Button B5;
 
     @FXML
-    private Label B6;
+    private Button B6;
 
     @FXML
-    private Label B7;
+    private Button B7;
 
     @FXML
-    private Label B8;
+    private Button B8;
 
     @FXML
-    private Label B9;
+    private Button B9;
 
     @FXML
-    private Label B10;
+    private Button B10;
 
     @FXML
-    private Label C1;
+    private Button C1;
 
     @FXML
-    private Label C2;
+    private Button C2;
 
     @FXML
-    private Label C3;
+    private Button C3;
 
     @FXML
-    private Label C4;
+    private Button C4;
 
     @FXML
-    private Label C5;
+    private Button C5;
 
     @FXML
-    private Label C6;
+    private Button C6;
 
     @FXML
-    private Label C7;
+    private Button C7;
 
     @FXML
-    private Label C8;
+    private Button C8;
 
     @FXML
-    private Label C9;
+    private Button C9;
 
     @FXML
-    private Label C10;
+    private Button C10;
 
     @FXML
-    private Label D1;
+    private Button D1;
 
     @FXML
-    private Label D2;
+    private Button D2;
 
     @FXML
-    private Label D3;
+    private Button D3;
 
     @FXML
-    private Label D4;
+    private Button D4;
 
     @FXML
-    private Label D5;
+    private Button D5;
 
     @FXML
-    private Label D6;
+    private Button D6;
 
     @FXML
-    private Label D7;
+    private Button D7;
 
     @FXML
-    private Label D8;
+    private Button D8;
 
     @FXML
-    private Label D9;
+    private Button D9;
 
     @FXML
-    private Label D10;
+    private Button D10;
 
     @FXML
     private Label anzeige;
