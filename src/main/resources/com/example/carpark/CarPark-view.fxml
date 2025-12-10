@@ -12,7 +12,7 @@
     <center>
         <Pane fx:id="parkspace" prefHeight="510.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="A1" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A1">
+            <Button fx:id="A1" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="5.0" onAction="#onClick" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A1">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

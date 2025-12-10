@@ -383,4 +383,8 @@ public class CarParkController {
         else if (mouseEvent.getEventType() == MouseEvent.MOUSE_EXITED) { button.setStyle("-fx-background-color: #32CD32;"); // ursprüngliche Farbe
         }
     }
+
+    public void onClick() {
+        // fick mein Leben
+    }
 }
