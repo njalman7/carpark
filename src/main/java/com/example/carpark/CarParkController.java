@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
 import java.util.HashMap;
@@ -372,5 +373,14 @@ public class CarParkController {
                 "Freie Parkplätze: " + free + " von " + TOTAL_SPOTS +
                         " | Auslastung: " + percent + " %"
         );
+    }
+
+    public void hover(MouseEvent mouseEvent) {
+        Button button = (Button) mouseEvent.getSource();
+        if (mouseEvent.getEventType() == MouseEvent.MOUSE_ENTERED) {
+            button.setStyle("-fx-background-color: #EEEE00;"); // Farbe beim Hover
+        }
+        else if (mouseEvent.getEventType() == MouseEvent.MOUSE_EXITED) { button.setStyle("-fx-background-color: #32CD32;"); // ursprüngliche Farbe
+        }
     }
 }
