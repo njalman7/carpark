@@ -6,7 +6,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -384,7 +387,36 @@ public class CarParkController {
         }
     }
 
+    private boolean free = true; // true -> grün, false -> rot
+    private Button[][] spaces;
+
     public void onClick() {
         // fick mein Leben
+        //Array befüllen
+        spaces = new Button[][]{
+                {A1, B1, C1, D1},
+                {A2, B2, C2, D2},
+                {A3, B3, C3, D3},
+                {A4, B4, C4, D4},
+                {A5, B5, C5, D5},
+                {A6, B6, C6, D6},
+                {A7, B7, C7, D7},
+                {A8, B8, C8, D8},
+                {A9, B9, C9, D9},
+                {A10, B10, C10, D10}
+        };
+        // Aktionen für Felder setzen
+        for (int r = 0; r < 10; r++) {
+            for (int c = 0; c < 10; c++) {
+                Button b = spaces[r][c];
+                // b.setOnAction(e -> handleMove(b));
+            }
+        }
     }
+
+
+
+
+
+
 }
