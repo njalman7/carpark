@@ -5,15 +5,27 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CarParkController {
     private final Map<String, Boolean> parkingStatus = new HashMap<>();
     private static final int TOTAL_SPOTS = 40;
-    private int freeSpots;
+
+    private List<Button> getAllButtons() {
+        return Arrays.asList(
+                A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,
+                B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,
+                C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,
+                D1,D2,D3,D4,D5,D6,D7,D8,D9,D10
+        );
+    }
     private void hideAllSpots() {
         A1.setVisible(false);
         A2.setVisible(false);
@@ -274,6 +286,10 @@ public class CarParkController {
     }
 
 
+    private static final String COLOR_FREE = "-fx-background-color: #32CD32;";
+    private static final String COLOR_USED = "-fx-background-color: #FF0000;";
+    private static final String COLOR_HOVER = "-fx-background-color: #EEEE00;";
+
     @FXML
     void onShow(ActionEvent event) {
         String selected = levelSelector.getValue();
@@ -304,57 +320,24 @@ public class CarParkController {
         }
 
     }
+    private void showRow(Button... buttons) {
+        for (Button b : buttons) b.setVisible(true);
+    }
 
     private void showRowA() {
-        A1.setVisible(true);
-        A2.setVisible(true);
-        A3.setVisible(true);
-        A4.setVisible(true);
-        A5.setVisible(true);
-        A6.setVisible(true);
-        A7.setVisible(true);
-        A8.setVisible(true);
-        A9.setVisible(true);
-        A10.setVisible(true);
+        showRow(A1,A2,A3,A4,A5,A6,A7,A8,A9,A10);
     }
 
     private void showRowB() {
-        B1.setVisible(true);
-        B2.setVisible(true);
-        B3.setVisible(true);
-        B4.setVisible(true);
-        B5.setVisible(true);
-        B6.setVisible(true);
-        B7.setVisible(true);
-        B8.setVisible(true);
-        B9.setVisible(true);
-        B10.setVisible(true);
+        showRow(B1,B2,B3,B4,B5,B6,B7,B8,B9,B10);
     }
 
     private void showRowC() {
-        C1.setVisible(true);
-        C2.setVisible(true);
-        C3.setVisible(true);
-        C4.setVisible(true);
-        C5.setVisible(true);
-        C6.setVisible(true);
-        C7.setVisible(true);
-        C8.setVisible(true);
-        C9.setVisible(true);
-        C10.setVisible(true);
+        showRow(C1,C2,C3,C4,C5,C6,C7,C8,C9,C10);
     }
 
     private void showRowD() {
-        D1.setVisible(true);
-        D2.setVisible(true);
-        D3.setVisible(true);
-        D4.setVisible(true);
-        D5.setVisible(true);
-        D6.setVisible(true);
-        D7.setVisible(true);
-        D8.setVisible(true);
-        D9.setVisible(true);
-        D10.setVisible(true);
+        showRow(D1,D2,D3,D4,D5,D6,D7,D8,D9,D10);
     }
     private int countFreeSpots() {
         int count = 0;
@@ -369,7 +352,7 @@ public class CarParkController {
     }
     private void updateFreeSpotsDisplay() {
         int free = countFreeSpots();
-        double percent = ((double) TOTAL_SPOTS - free) * 2.5;
+        double percent = (TOTAL_SPOTS - free) * 2.5;
 
         anzeige.setText(
                 "Freie Parkplätze: " + free + " von " + TOTAL_SPOTS +
@@ -381,21 +364,19 @@ public class CarParkController {
         Button b = (Button) mouseEvent.getSource();
 
         if (mouseEvent.getEventType() == MouseEvent.MOUSE_ENTERED) {
-            b.setStyle("-fx-background-color: #EEEE00;"); // Hover-Gelb
+            b.setStyle(COLOR_HOVER); // Hover-Gelb
         }
         else if (mouseEvent.getEventType() == MouseEvent.MOUSE_EXITED) {
             applyBaseColor(b); // zurück zur normalen Farbe
         }
+
     }
     private void applyBaseColor(Button b) {
         String id = b.getId();
         boolean free = parkingStatus.get(id);
 
-        if (free) {
-            b.setStyle("-fx-background-color: #32CD32;"); // grün
-        } else {
-            b.setStyle("-fx-background-color: #FF0000;"); // rot
-        }
+        if (free) b.setStyle(COLOR_FREE);
+        else b.setStyle(COLOR_USED);
     }
     public void onClick(ActionEvent event) {
         Button clicked = (Button) event.getSource();
