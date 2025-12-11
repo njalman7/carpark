@@ -336,7 +336,7 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="175.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                    <ComboBox fx:id="levelSelector" onAction="#onShow" prefHeight="30.0" prefWidth="175.0" promptText="Alle Etagen" />
+                    <ComboBox fx:id="levelSelector" onAction="#onShow" prefHeight="30.0" prefWidth="175.0" promptText="Bitte Etage wählen" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #1E90FF;">

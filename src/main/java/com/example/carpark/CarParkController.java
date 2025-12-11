@@ -14,160 +14,6 @@ import java.util.List;
 import java.util.Map;
 
 public class CarParkController {
-    private final Map<String, Boolean> parkingStatus = new HashMap<>();
-    private static final int TOTAL_SPOTS = 60;
-
-    private List<Button> getAllButtons() {
-        return Arrays.asList(
-                U11,U12,U13,U14,U15,U16,U17,U18,U19,U110,
-                E01,E02,E03,E04,E05,E06,E07,E08,E09,E010,
-                E11,E12,E13,E14,E15,E16,E17,E18,E19,E110,
-                E21,E22,E23,E24,E25,E26,E27,E28,E29,E210,
-                E31,E32,E33,E34,E35,E36,E37,E38,E39,E310,
-                E41,E42,E43,E44,E45,E46,E47,E48,E49,E410
-        );
-    }
-    private void hideAllSpots() {
-        U11.setVisible(false);
-        U12.setVisible(false);
-        U13.setVisible(false);
-        U14.setVisible(false);
-        U15.setVisible(false);
-        U16.setVisible(false);
-        U17.setVisible(false);
-        U18.setVisible(false);
-        U19.setVisible(false);
-        U110.setVisible(false);
-
-        E01.setVisible(false);
-        E02.setVisible(false);
-        E03.setVisible(false);
-        E04.setVisible(false);
-        E05.setVisible(false);
-        E06.setVisible(false);
-        E07.setVisible(false);
-        E08.setVisible(false);
-        E09.setVisible(false);
-        E010.setVisible(false);
-
-        E11.setVisible(false);
-        E12.setVisible(false);
-        E13.setVisible(false);
-        E14.setVisible(false);
-        E15.setVisible(false);
-        E16.setVisible(false);
-        E17.setVisible(false);
-        E18.setVisible(false);
-        E19.setVisible(false);
-        E110.setVisible(false);
-
-        E21.setVisible(false);
-        E22.setVisible(false);
-        E23.setVisible(false);
-        E24.setVisible(false);
-        E25.setVisible(false);
-        E26.setVisible(false);
-        E27.setVisible(false);
-        E28.setVisible(false);
-        E29.setVisible(false);
-        E210.setVisible(false);
-
-        E31.setVisible(false);
-        E32.setVisible(false);
-        E33.setVisible(false);
-        E34.setVisible(false);
-        E35.setVisible(false);
-        E36.setVisible(false);
-        E37.setVisible(false);
-        E38.setVisible(false);
-        E39.setVisible(false);
-        E310.setVisible(false);
-
-        E41.setVisible(false);
-        E42.setVisible(false);
-        E43.setVisible(false);
-        E44.setVisible(false);
-        E45.setVisible(false);
-        E46.setVisible(false);
-        E47.setVisible(false);
-        E48.setVisible(false);
-        E49.setVisible(false);
-        E410.setVisible(false);
-    }
-    private void setupParkingStatus() {
-
-        // Reihe -1
-        parkingStatus.put("U11", true);
-        parkingStatus.put("U12", true);
-        parkingStatus.put("U13", true);
-        parkingStatus.put("U14", true);
-        parkingStatus.put("U15", true);
-        parkingStatus.put("U16", true);
-        parkingStatus.put("U17", true);
-        parkingStatus.put("U18", true);
-        parkingStatus.put("U19", true);
-        parkingStatus.put("U110", true);
-
-        // Reihe 0
-        parkingStatus.put("E01", true);
-        parkingStatus.put("E02", true);
-        parkingStatus.put("E03", true);
-        parkingStatus.put("E04", true);
-        parkingStatus.put("E05", true);
-        parkingStatus.put("E06", true);
-        parkingStatus.put("E07", true);
-        parkingStatus.put("E08", true);
-        parkingStatus.put("E09", true);
-        parkingStatus.put("E010", true);
-
-        // Reihe 1
-        parkingStatus.put("E11", true);
-        parkingStatus.put("E12", true);
-        parkingStatus.put("E13", true);
-        parkingStatus.put("E14", true);
-        parkingStatus.put("E15", true);
-        parkingStatus.put("E16", true);
-        parkingStatus.put("E17", true);
-        parkingStatus.put("E18", true);
-        parkingStatus.put("E19", true);
-        parkingStatus.put("E110", true);
-
-        // Reihe 2
-        parkingStatus.put("E21", true);
-        parkingStatus.put("E22", true);
-        parkingStatus.put("E23", true);
-        parkingStatus.put("E24", true);
-        parkingStatus.put("E25", true);
-        parkingStatus.put("E26", true);
-        parkingStatus.put("E27", true);
-        parkingStatus.put("E28", true);
-        parkingStatus.put("E29", true);
-        parkingStatus.put("E210", true);
-
-        // Reihe 3
-        parkingStatus.put("E31", true);
-        parkingStatus.put("E32", true);
-        parkingStatus.put("E33", true);
-        parkingStatus.put("E34", true);
-        parkingStatus.put("E35", true);
-        parkingStatus.put("E36", true);
-        parkingStatus.put("E37", true);
-        parkingStatus.put("E38", true);
-        parkingStatus.put("E39", true);
-        parkingStatus.put("E310", true);
-
-        // Reihe 4
-        parkingStatus.put("E41", true);
-        parkingStatus.put("E42", true);
-        parkingStatus.put("E43", true);
-        parkingStatus.put("E44", true);
-        parkingStatus.put("E45", true);
-        parkingStatus.put("E46", true);
-        parkingStatus.put("E47", true);
-        parkingStatus.put("E48", true);
-        parkingStatus.put("E49", true);
-        parkingStatus.put("E410", true);
-    }
 
     @FXML
     private Button U11;
@@ -358,9 +204,167 @@ public class CarParkController {
     @FXML
     private Pane parkspace;
 
+    private final Map<String, Boolean> parkingStatus = new HashMap<>();
+    private static final int TOTAL_SPOTS = 60;
+
+    private void hideAllSpots() {
+        U11.setVisible(false);
+        U12.setVisible(false);
+        U13.setVisible(false);
+        U14.setVisible(false);
+        U15.setVisible(false);
+        U16.setVisible(false);
+        U17.setVisible(false);
+        U18.setVisible(false);
+        U19.setVisible(false);
+        U110.setVisible(false);
+
+        E01.setVisible(false);
+        E02.setVisible(false);
+        E03.setVisible(false);
+        E04.setVisible(false);
+        E05.setVisible(false);
+        E06.setVisible(false);
+        E07.setVisible(false);
+        E08.setVisible(false);
+        E09.setVisible(false);
+        E010.setVisible(false);
+
+        E11.setVisible(false);
+        E12.setVisible(false);
+        E13.setVisible(false);
+        E14.setVisible(false);
+        E15.setVisible(false);
+        E16.setVisible(false);
+        E17.setVisible(false);
+        E18.setVisible(false);
+        E19.setVisible(false);
+        E110.setVisible(false);
+
+        E21.setVisible(false);
+        E22.setVisible(false);
+        E23.setVisible(false);
+        E24.setVisible(false);
+        E25.setVisible(false);
+        E26.setVisible(false);
+        E27.setVisible(false);
+        E28.setVisible(false);
+        E29.setVisible(false);
+        E210.setVisible(false);
+
+        E31.setVisible(false);
+        E32.setVisible(false);
+        E33.setVisible(false);
+        E34.setVisible(false);
+        E35.setVisible(false);
+        E36.setVisible(false);
+        E37.setVisible(false);
+        E38.setVisible(false);
+        E39.setVisible(false);
+        E310.setVisible(false);
+
+        E41.setVisible(false);
+        E42.setVisible(false);
+        E43.setVisible(false);
+        E44.setVisible(false);
+        E45.setVisible(false);
+        E46.setVisible(false);
+        E47.setVisible(false);
+        E48.setVisible(false);
+        E49.setVisible(false);
+        E410.setVisible(false);
+    }
+
+    private List<Button> getAllButtons() {
+        return Arrays.asList(
+                U11,U12,U13,U14,U15,U16,U17,U18,U19,U110,
+                E01,E02,E03,E04,E05,E06,E07,E08,E09,E010,
+                E11,E12,E13,E14,E15,E16,E17,E18,E19,E110,
+                E21,E22,E23,E24,E25,E26,E27,E28,E29,E210,
+                E31,E32,E33,E34,E35,E36,E37,E38,E39,E310,
+                E41,E42,E43,E44,E45,E46,E47,E48,E49,E410
+        );
+    }
+
+    private void setupParkingStatus() {
+
+        // Reihe -1
+        parkingStatus.put("U11", true);
+        parkingStatus.put("U12", true);
+        parkingStatus.put("U13", true);
+        parkingStatus.put("U14", true);
+        parkingStatus.put("U15", true);
+        parkingStatus.put("U16", true);
+        parkingStatus.put("U17", true);
+        parkingStatus.put("U18", true);
+        parkingStatus.put("U19", true);
+        parkingStatus.put("U110", true);
+
+        // Reihe 0
+        parkingStatus.put("E01", true);
+        parkingStatus.put("E02", true);
+        parkingStatus.put("E03", true);
+        parkingStatus.put("E04", true);
+        parkingStatus.put("E05", true);
+        parkingStatus.put("E06", true);
+        parkingStatus.put("E07", true);
+        parkingStatus.put("E08", true);
+        parkingStatus.put("E09", true);
+        parkingStatus.put("E010", true);
+
+        // Reihe 1
+        parkingStatus.put("E11", true);
+        parkingStatus.put("E12", true);
+        parkingStatus.put("E13", true);
+        parkingStatus.put("E14", true);
+        parkingStatus.put("E15", true);
+        parkingStatus.put("E16", true);
+        parkingStatus.put("E17", true);
+        parkingStatus.put("E18", true);
+        parkingStatus.put("E19", true);
+        parkingStatus.put("E110", true);
+
+        // Reihe 2
+        parkingStatus.put("E21", true);
+        parkingStatus.put("E22", true);
+        parkingStatus.put("E23", true);
+        parkingStatus.put("E24", true);
+        parkingStatus.put("E25", true);
+        parkingStatus.put("E26", true);
+        parkingStatus.put("E27", true);
+        parkingStatus.put("E28", true);
+        parkingStatus.put("E29", true);
+        parkingStatus.put("E210", true);
+
+        // Reihe 3
+        parkingStatus.put("E31", true);
+        parkingStatus.put("E32", true);
+        parkingStatus.put("E33", true);
+        parkingStatus.put("E34", true);
+        parkingStatus.put("E35", true);
+        parkingStatus.put("E36", true);
+        parkingStatus.put("E37", true);
+        parkingStatus.put("E38", true);
+        parkingStatus.put("E39", true);
+        parkingStatus.put("E310", true);
+
+        // Reihe 4
+        parkingStatus.put("E41", true);
+        parkingStatus.put("E42", true);
+        parkingStatus.put("E43", true);
+        parkingStatus.put("E44", true);
+        parkingStatus.put("E45", true);
+        parkingStatus.put("E46", true);
+        parkingStatus.put("E47", true);
+        parkingStatus.put("E48", true);
+        parkingStatus.put("E49", true);
+        parkingStatus.put("E410", true);
+    }
+
     @FXML
     void initialize() {
         setupParkingStatus();
+        hideAllSpots();
         updateFreeSpotsDisplay();
 
         Button[] allButtons = {
@@ -378,13 +382,13 @@ public class CarParkController {
         }
 
         levelSelector.getItems().setAll(
-                "Alle Etagen",
                 "Untergeschoss -1",
                 "Etage 0",
                 "Etage 1",
                 "Etage 2",
                 "Etage 3",
-                "Etage 4"
+                "Etage 4",
+                "Alle Etagen"
         );
         for (Button b : allButtons) {
             String id = b.getId();
@@ -409,13 +413,8 @@ public class CarParkController {
         hideAllSpots();
 
         switch (selected) {
-            case "Alle Etagen":
-                showRowU1();
-                showRowE0();
-                showRowE1();
-                showRowE2();
-                showRowE3();
-                showRowE4();
+            case "Bitte Etage wählen":
+                showRowX();
                 break;
             case "Untergeschoss -1":
                 showRowU1();
@@ -435,11 +434,23 @@ public class CarParkController {
             case "Etage 4":
                 showRowE4();
                 break;
+            case "Alle Etagen":
+                showRowU1();
+                showRowE0();
+                showRowE1();
+                showRowE2();
+                showRowE3();
+                showRowE4();
+                break;
         }
 
     }
     private void showRow(Button... buttons) {
         for (Button b : buttons) b.setVisible(true);
+    }
+
+    private void showRowX() {
+        showRow();
     }
 
     private void showRowU1() {
