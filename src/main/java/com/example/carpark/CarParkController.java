@@ -356,19 +356,6 @@ public class CarParkController {
         D9.setVisible(true);
         D10.setVisible(true);
     }
-
-
-    private void updateAnzeige(double utilization) {
-        anzeige.setText(
-                " Freie Parkplätze: " + freeSpots + " von " + TOTAL_SPOTS +
-                        " | Auslastung: " + utilization + "%"
-        );
-    }
-
-    private double calculateUtilization() {
-        return (100.0 / TOTAL_SPOTS) * freeSpots;
-
-    }
     private int countFreeSpots() {
         int count = 0;
 
@@ -382,7 +369,7 @@ public class CarParkController {
     }
     private void updateFreeSpotsDisplay() {
         int free = countFreeSpots();
-        double percent = (100.0 / TOTAL_SPOTS) * free;
+        double percent = ((double) TOTAL_SPOTS - free) * 2.5;
 
         anzeige.setText(
                 "Freie Parkplätze: " + free + " von " + TOTAL_SPOTS +
