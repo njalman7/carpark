@@ -6,17 +6,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class CarParkController {
-    private Map<String, Boolean> parkingStatus = new HashMap<>();
-    private static final int TOTAL_SPOTS = 200;
+    private final Map<String, Boolean> parkingStatus = new HashMap<>();
+    private static final int TOTAL_SPOTS = 40;
     private int freeSpots;
     private void hideAllSpots() {
         A1.setVisible(false);
@@ -68,48 +64,48 @@ public class CarParkController {
         // Reihe A
         parkingStatus.put("A1", true);
         parkingStatus.put("A2", true);
-        parkingStatus.put("A3", false);
+        parkingStatus.put("A3", true);
         parkingStatus.put("A4", true);
-        parkingStatus.put("A5", false);
+        parkingStatus.put("A5", true);
         parkingStatus.put("A6", true);
         parkingStatus.put("A7", true);
-        parkingStatus.put("A8", false);
+        parkingStatus.put("A8", true);
         parkingStatus.put("A9", true);
         parkingStatus.put("A10", true);
 
         // Reihe B
         parkingStatus.put("B1", true);
-        parkingStatus.put("B2", false);
+        parkingStatus.put("B2", true);
         parkingStatus.put("B3", true);
         parkingStatus.put("B4", true);
         parkingStatus.put("B5", true);
-        parkingStatus.put("B6", false);
+        parkingStatus.put("B6", true);
         parkingStatus.put("B7", true);
         parkingStatus.put("B8", true);
-        parkingStatus.put("B9", false);
+        parkingStatus.put("B9", true);
         parkingStatus.put("B10", true);
 
         // Reihe C
         parkingStatus.put("C1", true);
         parkingStatus.put("C2", true);
-        parkingStatus.put("C3", false);
+        parkingStatus.put("C3", true);
         parkingStatus.put("C4", true);
         parkingStatus.put("C5", true);
-        parkingStatus.put("C6", false);
+        parkingStatus.put("C6", true);
         parkingStatus.put("C7", true);
-        parkingStatus.put("C8", false);
+        parkingStatus.put("C8", true);
         parkingStatus.put("C9", true);
         parkingStatus.put("C10", true);
 
         // Reihe D
         parkingStatus.put("D1", true);
-        parkingStatus.put("D2", false);
+        parkingStatus.put("D2", true);
         parkingStatus.put("D3", true);
         parkingStatus.put("D4", true);
-        parkingStatus.put("D5", false);
+        parkingStatus.put("D5", true);
         parkingStatus.put("D6", true);
         parkingStatus.put("D7", true);
-        parkingStatus.put("D8", false);
+        parkingStatus.put("D8", true);
         parkingStatus.put("D9", true);
         parkingStatus.put("D10", true);
     }
@@ -248,7 +244,17 @@ public class CarParkController {
         setupParkingStatus();
         updateFreeSpotsDisplay();
 
-        double utilization = calculateUtilization();
+        Button[] allButtons = {
+                A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,
+                B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,
+                C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,
+                D1,D2,D3,D4,D5,D6,D7,D8,D9,D10
+        };
+
+        for (Button b : allButtons) {
+            applyBaseColor(b);
+            b.setOnAction(this::onClick);
+        }
 
         levelSelector.getItems().setAll(
                 "Alle Etagen",
@@ -257,8 +263,14 @@ public class CarParkController {
                 "Etage 2",
                 "Etage 3"
         );
-
-        updateAnzeige(utilization);
+        for (Button b : allButtons) {
+            String id = b.getId();
+            if (parkingStatus.get(id)) {
+                b.setStyle("-fx-background-color: #32CD32;");
+            } else {
+                b.setStyle("-fx-background-color: #FF0000;");
+            }
+        }
     }
 
 
@@ -379,39 +391,33 @@ public class CarParkController {
     }
 
     public void hover(MouseEvent mouseEvent) {
-        Button button = (Button) mouseEvent.getSource();
+        Button b = (Button) mouseEvent.getSource();
+
         if (mouseEvent.getEventType() == MouseEvent.MOUSE_ENTERED) {
-            button.setStyle("-fx-background-color: #EEEE00;"); // Farbe beim Hover
+            b.setStyle("-fx-background-color: #EEEE00;"); // Hover-Gelb
         }
-        else if (mouseEvent.getEventType() == MouseEvent.MOUSE_EXITED) { button.setStyle("-fx-background-color: #32CD32;"); // ursprüngliche Farbe
+        else if (mouseEvent.getEventType() == MouseEvent.MOUSE_EXITED) {
+            applyBaseColor(b); // zurück zur normalen Farbe
         }
     }
+    private void applyBaseColor(Button b) {
+        String id = b.getId();
+        boolean free = parkingStatus.get(id);
 
-    private boolean free = true; // true -> grün, false -> rot
-    private Button[][] spaces;
-
-    public void onClick() {
-        // fick mein Leben
-        //Array befüllen
-        spaces = new Button[][]{
-                {A1, B1, C1, D1},
-                {A2, B2, C2, D2},
-                {A3, B3, C3, D3},
-                {A4, B4, C4, D4},
-                {A5, B5, C5, D5},
-                {A6, B6, C6, D6},
-                {A7, B7, C7, D7},
-                {A8, B8, C8, D8},
-                {A9, B9, C9, D9},
-                {A10, B10, C10, D10}
-        };
-        // Aktionen für Felder setzen
-        for (int r = 0; r < 10; r++) {
-            for (int c = 0; c < 10; c++) {
-                Button b = spaces[r][c];
-                // b.setOnAction(e -> handleMove(b));
-            }
+        if (free) {
+            b.setStyle("-fx-background-color: #32CD32;"); // grün
+        } else {
+            b.setStyle("-fx-background-color: #FF0000;"); // rot
         }
+    }
+    public void onClick(ActionEvent event) {
+        Button clicked = (Button) event.getSource();
+        String id = clicked.getId();
+
+        parkingStatus.compute(id, (k, current) -> Boolean.FALSE.equals(current));
+
+        applyBaseColor(clicked);     // Zustand neu einfärben
+        updateFreeSpotsDisplay();    // Anzeige aktualisieren
     }
 
 
