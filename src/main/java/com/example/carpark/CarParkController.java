@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
@@ -16,231 +15,339 @@ import java.util.Map;
 
 public class CarParkController {
     private final Map<String, Boolean> parkingStatus = new HashMap<>();
-    private static final int TOTAL_SPOTS = 40;
+    private static final int TOTAL_SPOTS = 60;
 
     private List<Button> getAllButtons() {
         return Arrays.asList(
-                A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,
-                B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,
-                C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,
-                D1,D2,D3,D4,D5,D6,D7,D8,D9,D10
+                U11,U12,U13,U14,U15,U16,U17,U18,U19,U110,
+                E01,E02,E03,E04,E05,E06,E07,E08,E09,E010,
+                E11,E12,E13,E14,E15,E16,E17,E18,E19,E110,
+                E21,E22,E23,E24,E25,E26,E27,E28,E29,E210,
+                E31,E32,E33,E34,E35,E36,E37,E38,E39,E310,
+                E41,E42,E43,E44,E45,E46,E47,E48,E49,E410
         );
     }
     private void hideAllSpots() {
-        A1.setVisible(false);
-        A2.setVisible(false);
-        A3.setVisible(false);
-        A4.setVisible(false);
-        A5.setVisible(false);
-        A6.setVisible(false);
-        A7.setVisible(false);
-        A8.setVisible(false);
-        A9.setVisible(false);
-        A10.setVisible(false);
+        U11.setVisible(false);
+        U12.setVisible(false);
+        U13.setVisible(false);
+        U14.setVisible(false);
+        U15.setVisible(false);
+        U16.setVisible(false);
+        U17.setVisible(false);
+        U18.setVisible(false);
+        U19.setVisible(false);
+        U110.setVisible(false);
 
-        B1.setVisible(false);
-        B2.setVisible(false);
-        B3.setVisible(false);
-        B4.setVisible(false);
-        B5.setVisible(false);
-        B6.setVisible(false);
-        B7.setVisible(false);
-        B8.setVisible(false);
-        B9.setVisible(false);
-        B10.setVisible(false);
+        E01.setVisible(false);
+        E02.setVisible(false);
+        E03.setVisible(false);
+        E04.setVisible(false);
+        E05.setVisible(false);
+        E06.setVisible(false);
+        E07.setVisible(false);
+        E08.setVisible(false);
+        E09.setVisible(false);
+        E010.setVisible(false);
 
-        C1.setVisible(false);
-        C2.setVisible(false);
-        C3.setVisible(false);
-        C4.setVisible(false);
-        C5.setVisible(false);
-        C6.setVisible(false);
-        C7.setVisible(false);
-        C8.setVisible(false);
-        C9.setVisible(false);
-        C10.setVisible(false);
+        E11.setVisible(false);
+        E12.setVisible(false);
+        E13.setVisible(false);
+        E14.setVisible(false);
+        E15.setVisible(false);
+        E16.setVisible(false);
+        E17.setVisible(false);
+        E18.setVisible(false);
+        E19.setVisible(false);
+        E110.setVisible(false);
 
-        D1.setVisible(false);
-        D2.setVisible(false);
-        D3.setVisible(false);
-        D4.setVisible(false);
-        D5.setVisible(false);
-        D6.setVisible(false);
-        D7.setVisible(false);
-        D8.setVisible(false);
-        D9.setVisible(false);
-        D10.setVisible(false);
+        E21.setVisible(false);
+        E22.setVisible(false);
+        E23.setVisible(false);
+        E24.setVisible(false);
+        E25.setVisible(false);
+        E26.setVisible(false);
+        E27.setVisible(false);
+        E28.setVisible(false);
+        E29.setVisible(false);
+        E210.setVisible(false);
+
+        E31.setVisible(false);
+        E32.setVisible(false);
+        E33.setVisible(false);
+        E34.setVisible(false);
+        E35.setVisible(false);
+        E36.setVisible(false);
+        E37.setVisible(false);
+        E38.setVisible(false);
+        E39.setVisible(false);
+        E310.setVisible(false);
+
+        E41.setVisible(false);
+        E42.setVisible(false);
+        E43.setVisible(false);
+        E44.setVisible(false);
+        E45.setVisible(false);
+        E46.setVisible(false);
+        E47.setVisible(false);
+        E48.setVisible(false);
+        E49.setVisible(false);
+        E410.setVisible(false);
     }
     private void setupParkingStatus() {
 
-        // Reihe A
-        parkingStatus.put("A1", true);
-        parkingStatus.put("A2", true);
-        parkingStatus.put("A3", true);
-        parkingStatus.put("A4", true);
-        parkingStatus.put("A5", true);
-        parkingStatus.put("A6", true);
-        parkingStatus.put("A7", true);
-        parkingStatus.put("A8", true);
-        parkingStatus.put("A9", true);
-        parkingStatus.put("A10", true);
+        // Reihe -1
+        parkingStatus.put("U11", true);
+        parkingStatus.put("U12", true);
+        parkingStatus.put("U13", true);
+        parkingStatus.put("U14", true);
+        parkingStatus.put("U15", true);
+        parkingStatus.put("U16", true);
+        parkingStatus.put("U17", true);
+        parkingStatus.put("U18", true);
+        parkingStatus.put("U19", true);
+        parkingStatus.put("U110", true);
 
-        // Reihe B
-        parkingStatus.put("B1", true);
-        parkingStatus.put("B2", true);
-        parkingStatus.put("B3", true);
-        parkingStatus.put("B4", true);
-        parkingStatus.put("B5", true);
-        parkingStatus.put("B6", true);
-        parkingStatus.put("B7", true);
-        parkingStatus.put("B8", true);
-        parkingStatus.put("B9", true);
-        parkingStatus.put("B10", true);
+        // Reihe 0
+        parkingStatus.put("E01", true);
+        parkingStatus.put("E02", true);
+        parkingStatus.put("E03", true);
+        parkingStatus.put("E04", true);
+        parkingStatus.put("E05", true);
+        parkingStatus.put("E06", true);
+        parkingStatus.put("E07", true);
+        parkingStatus.put("E08", true);
+        parkingStatus.put("E09", true);
+        parkingStatus.put("E010", true);
 
-        // Reihe C
-        parkingStatus.put("C1", true);
-        parkingStatus.put("C2", true);
-        parkingStatus.put("C3", true);
-        parkingStatus.put("C4", true);
-        parkingStatus.put("C5", true);
-        parkingStatus.put("C6", true);
-        parkingStatus.put("C7", true);
-        parkingStatus.put("C8", true);
-        parkingStatus.put("C9", true);
-        parkingStatus.put("C10", true);
+        // Reihe 1
+        parkingStatus.put("E11", true);
+        parkingStatus.put("E12", true);
+        parkingStatus.put("E13", true);
+        parkingStatus.put("E14", true);
+        parkingStatus.put("E15", true);
+        parkingStatus.put("E16", true);
+        parkingStatus.put("E17", true);
+        parkingStatus.put("E18", true);
+        parkingStatus.put("E19", true);
+        parkingStatus.put("E110", true);
 
-        // Reihe D
-        parkingStatus.put("D1", true);
-        parkingStatus.put("D2", true);
-        parkingStatus.put("D3", true);
-        parkingStatus.put("D4", true);
-        parkingStatus.put("D5", true);
-        parkingStatus.put("D6", true);
-        parkingStatus.put("D7", true);
-        parkingStatus.put("D8", true);
-        parkingStatus.put("D9", true);
-        parkingStatus.put("D10", true);
+        // Reihe 2
+        parkingStatus.put("E21", true);
+        parkingStatus.put("E22", true);
+        parkingStatus.put("E23", true);
+        parkingStatus.put("E24", true);
+        parkingStatus.put("E25", true);
+        parkingStatus.put("E26", true);
+        parkingStatus.put("E27", true);
+        parkingStatus.put("E28", true);
+        parkingStatus.put("E29", true);
+        parkingStatus.put("E210", true);
+
+        // Reihe 3
+        parkingStatus.put("E31", true);
+        parkingStatus.put("E32", true);
+        parkingStatus.put("E33", true);
+        parkingStatus.put("E34", true);
+        parkingStatus.put("E35", true);
+        parkingStatus.put("E36", true);
+        parkingStatus.put("E37", true);
+        parkingStatus.put("E38", true);
+        parkingStatus.put("E39", true);
+        parkingStatus.put("E310", true);
+
+        // Reihe 4
+        parkingStatus.put("E41", true);
+        parkingStatus.put("E42", true);
+        parkingStatus.put("E43", true);
+        parkingStatus.put("E44", true);
+        parkingStatus.put("E45", true);
+        parkingStatus.put("E46", true);
+        parkingStatus.put("E47", true);
+        parkingStatus.put("E48", true);
+        parkingStatus.put("E49", true);
+        parkingStatus.put("E410", true);
     }
 
     @FXML
-    private Button A1;
+    private Button U11;
 
     @FXML
-    private Button A2;
+    private Button U12;
 
     @FXML
-    private Button A3;
+    private Button U13;
 
     @FXML
-    private Button A4;
+    private Button U14;
 
     @FXML
-    private Button A5;
+    private Button U15;
 
     @FXML
-    private Button A6;
+    private Button U16;
 
     @FXML
-    private Button A7;
+    private Button U17;
 
     @FXML
-    private Button A8;
+    private Button U18;
 
     @FXML
-    private Button A9;
+    private Button U19;
 
     @FXML
-    private Button A10;
+    private Button U110;
 
     @FXML
-    private Button B1;
+    private Button E01;
 
     @FXML
-    private Button B2;
+    private Button E02;
 
     @FXML
-    private Button B3;
+    private Button E03;
 
     @FXML
-    private Button B4;
+    private Button E04;
 
     @FXML
-    private Button B5;
+    private Button E05;
 
     @FXML
-    private Button B6;
+    private Button E06;
 
     @FXML
-    private Button B7;
+    private Button E07;
 
     @FXML
-    private Button B8;
+    private Button E08;
 
     @FXML
-    private Button B9;
+    private Button E09;
 
     @FXML
-    private Button B10;
+    private Button E010;
 
     @FXML
-    private Button C1;
+    private Button E11;
 
     @FXML
-    private Button C2;
+    private Button E12;
 
     @FXML
-    private Button C3;
+    private Button E13;
 
     @FXML
-    private Button C4;
+    private Button E14;
 
     @FXML
-    private Button C5;
+    private Button E15;
 
     @FXML
-    private Button C6;
+    private Button E16;
 
     @FXML
-    private Button C7;
+    private Button E17;
 
     @FXML
-    private Button C8;
+    private Button E18;
 
     @FXML
-    private Button C9;
+    private Button E19;
 
     @FXML
-    private Button C10;
+    private Button E110;
 
     @FXML
-    private Button D1;
+    private Button E21;
 
     @FXML
-    private Button D2;
+    private Button E22;
 
     @FXML
-    private Button D3;
+    private Button E23;
 
     @FXML
-    private Button D4;
+    private Button E24;
 
     @FXML
-    private Button D5;
+    private Button E25;
 
     @FXML
-    private Button D6;
+    private Button E26;
 
     @FXML
-    private Button D7;
+    private Button E27;
 
     @FXML
-    private Button D8;
+    private Button E28;
 
     @FXML
-    private Button D9;
+    private Button E29;
 
     @FXML
-    private Button D10;
+    private Button E210;
+
+    @FXML
+    private Button E31;
+
+    @FXML
+    private Button E32;
+
+    @FXML
+    private Button E33;
+
+    @FXML
+    private Button E34;
+
+    @FXML
+    private Button E35;
+
+    @FXML
+    private Button E36;
+
+    @FXML
+    private Button E37;
+
+    @FXML
+    private Button E38;
+
+    @FXML
+    private Button E39;
+
+    @FXML
+    private Button E310;
+
+    @FXML
+    private Button E41;
+
+    @FXML
+    private Button E42;
+
+    @FXML
+    private Button E43;
+
+    @FXML
+    private Button E44;
+
+    @FXML
+    private Button E45;
+
+    @FXML
+    private Button E46;
+
+    @FXML
+    private Button E47;
+
+    @FXML
+    private Button E48;
+
+    @FXML
+    private Button E49;
+
+    @FXML
+    private Button E410;
 
     @FXML
     private Label anzeige;
@@ -257,10 +364,12 @@ public class CarParkController {
         updateFreeSpotsDisplay();
 
         Button[] allButtons = {
-                A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,
-                B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,
-                C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,
-                D1,D2,D3,D4,D5,D6,D7,D8,D9,D10
+                U11, U12, U13, U14, U15, U16, U17, U18, U19, U110,
+                E01, E02, E03, E04, E05, E06, E07, E08, E09, E010,
+                E11, E12, E13, E14, E15, E16, E17, E18, E19, E110,
+                E21, E22, E23, E24, E25, E26, E27, E28, E29, E210,
+                E31, E32, E33, E34, E35, E36, E37, E38, E39, E310,
+                E41, E42, E43, E44, E45, E46, E47, E48, E49, E410
         };
 
         for (Button b : allButtons) {
@@ -270,10 +379,12 @@ public class CarParkController {
 
         levelSelector.getItems().setAll(
                 "Alle Etagen",
+                "Untergeschoss -1",
                 "Etage 0",
                 "Etage 1",
                 "Etage 2",
-                "Etage 3"
+                "Etage 3",
+                "Etage 4"
         );
         for (Button b : allButtons) {
             String id = b.getId();
@@ -284,7 +395,6 @@ public class CarParkController {
             }
         }
     }
-
 
     private static final String COLOR_FREE = "-fx-background-color: #32CD32;";
     private static final String COLOR_USED = "-fx-background-color: #FF0000;";
@@ -300,22 +410,30 @@ public class CarParkController {
 
         switch (selected) {
             case "Alle Etagen":
-                showRowA();
-                showRowB();
-                showRowC();
-                showRowD();
+                showRowU1();
+                showRowE0();
+                showRowE1();
+                showRowE2();
+                showRowE3();
+                showRowE4();
+                break;
+            case "Untergeschoss -1":
+                showRowU1();
                 break;
             case "Etage 0":
-                showRowA();
+                showRowE0();
                 break;
             case "Etage 1":
-                showRowB();
+                showRowE1();
                 break;
             case "Etage 2":
-                showRowC();
+                showRowE2();
                 break;
             case "Etage 3":
-                showRowD();
+                showRowE3();
+                break;
+            case "Etage 4":
+                showRowE4();
                 break;
         }
 
@@ -324,20 +442,27 @@ public class CarParkController {
         for (Button b : buttons) b.setVisible(true);
     }
 
-    private void showRowA() {
-        showRow(A1,A2,A3,A4,A5,A6,A7,A8,A9,A10);
+    private void showRowU1() {
+        showRow(U11, U12, U13, U14, U15, U16, U17, U18, U19, U110);
     }
 
-    private void showRowB() {
-        showRow(B1,B2,B3,B4,B5,B6,B7,B8,B9,B10);
+    private void showRowE0() {
+        showRow(E01, E02, E03, E04, E05, E06, E07, E08, E09, E010);
     }
 
-    private void showRowC() {
-        showRow(C1,C2,C3,C4,C5,C6,C7,C8,C9,C10);
+    private void showRowE1() {
+        showRow(E11, E12, E13, E14, E15, E16, E17, E18, E19, E110);
     }
 
-    private void showRowD() {
-        showRow(D1,D2,D3,D4,D5,D6,D7,D8,D9,D10);
+    private void showRowE2() {
+        showRow(E21, E22, E23, E24, E25, E26, E27, E28, E29, E210);
+    }
+
+    private void showRowE3() {
+        showRow(E31, E32, E33, E34, E35, E36, E37, E38, E39, E310);
+    }
+    private void showRowE4() {
+        showRow(E41, E42, E43, E44, E45, E46, E47, E48, E49, E410);
     }
     private int countFreeSpots() {
         int count = 0;
@@ -352,11 +477,12 @@ public class CarParkController {
     }
     private void updateFreeSpotsDisplay() {
         int free = countFreeSpots();
-        double percent = (TOTAL_SPOTS - free) * 2.5;
+        double percent = (double) 100 / TOTAL_SPOTS * (TOTAL_SPOTS - free);
+        double finalPercent = Math.round(percent * 100.0) / 100.0;
 
         anzeige.setText(
                 "Freie Parkplätze: " + free + " von " + TOTAL_SPOTS +
-                        " | Auslastung: " + percent + " %"
+                        "    |    Auslastung: " + finalPercent + " %"
         );
     }
 

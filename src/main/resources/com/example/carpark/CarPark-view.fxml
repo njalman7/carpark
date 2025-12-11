@@ -8,209 +8,311 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carpark.CarParkController">
+<BorderPane prefHeight="600.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carpark.CarParkController">
     <center>
-        <Pane fx:id="parkspace" prefHeight="510.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <Pane fx:id="parkspace" prefHeight="510.0" prefWidth="605.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="A1" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="5.0" onAction="#onClick" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A1">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="A2" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A2">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="A3" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A3">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="A4" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A4">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="A5" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A5">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="A6" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A6">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-             <Button fx:id="A7" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A7">
+             <Button fx:id="U11" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.1">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="A8" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A8">
+             <Button fx:id="U12" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.2">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="A9" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A9">
+             <Button fx:id="U13" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.3">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="A10" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="A10">
+             <Button fx:id="U14" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.4">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-
-             <Button fx:id="B1" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B1">
+             <Button fx:id="U15" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.5">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="B2" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B2">
+             <Button fx:id="U16" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.6">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="B3" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B3">
+             <Button fx:id="U17" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.7">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="B4" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B4">
+             <Button fx:id="U18" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.8">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="B5" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B5">
+             <Button fx:id="U19" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.9">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="B6" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B6">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="B7" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B7">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="B8" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B8">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="B9" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B9">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="B10" alignment="CENTER" contentDisplay="TOP" layoutX="220.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="B10">
+             <Button fx:id="U110" alignment="CENTER" contentDisplay="TOP" layoutX="25.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="U1.10">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
 
-             <Button fx:id="C1" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C1">
+            <Button fx:id="E01" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="E02" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="E03" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="E04" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="E05" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="E06" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.6">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+             <Button fx:id="E07" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.7">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="C2" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C2">
+             <Button fx:id="E08" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.8">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="C3" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C3">
+             <Button fx:id="E09" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.9">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="C4" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C4">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="C5" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C5">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="C6" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C6">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="C7" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C7">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="C8" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C8">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="C9" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C9">
-                 <font>
-                     <Font name="System Bold" size="15.0" />
-                 </font>
-             </Button>
-             <Button fx:id="C10" alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="C10">
+             <Button fx:id="E010" alignment="CENTER" contentDisplay="TOP" layoutX="120.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E0.10">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
 
-             <Button fx:id="D1" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D1">
+             <Button fx:id="E11" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.1">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="D2" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D2">
+             <Button fx:id="E12" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.2">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="D3" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D3">
+             <Button fx:id="E13" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.3">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="D4" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D4">
+             <Button fx:id="E14" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.4">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="D5" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D5">
+             <Button fx:id="E15" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.5">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="D6" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D6">
+             <Button fx:id="E16" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.6">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="D7" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D7">
+             <Button fx:id="E17" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.7">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="D8" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D8">
+             <Button fx:id="E18" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.8">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="D9" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D9">
+             <Button fx:id="E19" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.9">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
              </Button>
-             <Button fx:id="D10" alignment="CENTER" contentDisplay="TOP" layoutX="495.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="D10">
+             <Button fx:id="E110" alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E1.10">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+
+             <Button fx:id="E21" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.1">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E22" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.2">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E23" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.3">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E24" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.4">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E25" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.5">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E26" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.6">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E27" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.7">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E28" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.8">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E29" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.9">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E210" alignment="CENTER" contentDisplay="TOP" layoutX="310.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E2.10">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+
+             <Button fx:id="E31" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.1">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E32" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.2">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E33" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.3">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E34" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.4">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E35" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.5">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E36" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.6">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E37" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.7">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E38" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.8">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E39" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.9">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E310" alignment="CENTER" contentDisplay="TOP" layoutX="405.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E3.10">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+
+             <Button fx:id="E41" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="5.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.1">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E42" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="55.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.2">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E43" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="105.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.3">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E44" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="155.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.4">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E45" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="205.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.5">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E46" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="255.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.6">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E47" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="305.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.7">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E48" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="355.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.8">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E49" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="405.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.9">
+                 <font>
+                     <Font name="System Bold" size="15.0" />
+                 </font>
+             </Button>
+             <Button fx:id="E410" alignment="CENTER" contentDisplay="TOP" layoutX="500.0" layoutY="455.0" onMouseEntered="#hover" onMouseExited="#hover" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #32CD32;" text="E4.10">
                  <font>
                      <Font name="System Bold" size="15.0" />
                  </font>
@@ -221,7 +323,7 @@
         <ComboBox fx:id="levelSelector" onAction="#onShow" prefHeight="30.0" prefWidth="200.0" promptText="Alle Etagen" BorderPane.alignment="CENTER" />
     </top>
    <bottom>
-      <Label fx:id="anzeige" alignment="CENTER" opacity="0.85" prefHeight="60.0" prefWidth="600.0" textAlignment="CENTER" textFill="#a13f3f" BorderPane.alignment="CENTER">
+      <Label fx:id="anzeige" alignment="CENTER" contentDisplay="CENTER" opacity="0.85" prefHeight="60.0" prefWidth="605.0" textAlignment="CENTER" textFill="#a13f3f" BorderPane.alignment="CENTER_LEFT">
          <font>
             <Font size="18.0" />
          </font>
